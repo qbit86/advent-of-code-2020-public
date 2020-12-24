@@ -5,7 +5,7 @@ namespace AdventOfCode2020
 {
     public sealed class OrientedTile : IEquatable<OrientedTile>
     {
-        private OrientedTile(int id, string[] data, int transform,
+        private OrientedTile(int id, string[] data, TransformKinds transform,
             Border leftBorder, Border topBorder, Border rightBorder, Border bottomBorder)
         {
             Id = id;
@@ -19,7 +19,7 @@ namespace AdventOfCode2020
 
         internal int Id { get; }
         internal string[] Data { get; }
-        internal int Transform { get; }
+        internal TransformKinds Transform { get; }
         internal Border LeftBorder { get; }
         internal Border TopBorder { get; }
         internal Border RightBorder { get; }
@@ -37,7 +37,7 @@ namespace AdventOfCode2020
         public override string ToString() =>
             $"{nameof(OrientedTile)} {{ {nameof(Id)} = {Id}, {nameof(Transform)} = {Transform}, Left = {LeftBorder}, Top = {TopBorder}, Right = {RightBorder}, Bottom = {BottomBorder} }}";
 
-        internal static OrientedTile Create(int id, string[] data, int transform)
+        internal static OrientedTile Create(int id, string[] data, TransformKinds transform)
         {
             string[] transformedData = TransformHelpers.ApplyTransform(data, transform);
             return new OrientedTile(id, transformedData, transform,

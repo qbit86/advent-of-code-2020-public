@@ -44,22 +44,16 @@ namespace AdventOfCode2020
             return result;
         }
 
-        public static string[] ApplyTransform(string[] data, int transform)
+        public static string[] ApplyTransform(string[] data, TransformKinds transform)
         {
-            if (data is null)
-                throw new ArgumentNullException(nameof(data));
-
-            if ((uint)transform >= 8U)
-                throw new ArgumentOutOfRangeException(nameof(transform));
-
-            string[] result = data;
-            if ((transform & 0b100) != 0)
+            string[] result = data ?? throw new ArgumentNullException(nameof(data));
+            if ((transform & TransformKinds.Transpose) != 0)
                 result = Transpose(result);
 
-            if ((transform & 0b10) != 0)
+            if ((transform & TransformKinds.FlipY) != 0)
                 result = FlipY(result);
 
-            if ((transform & 1) != 0)
+            if ((transform & TransformKinds.FlipX) != 0)
                 result = FlipX(result);
 
             return result;

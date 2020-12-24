@@ -27,7 +27,7 @@ namespace AdventOfCode2020
             int width = (int)Math.Sqrt(orientedTileCount + vertex.RawTiles.Count);
             foreach (RawTile rawTile in vertex.RawTiles)
             {
-                for (int transform = 0; transform < 8; ++transform)
+                for (TransformKinds transform = TransformKinds.None; transform < (TransformKinds)8; ++transform)
                 {
                     var orientedTile = OrientedTile.Create(rawTile.Id, rawTile.Data, transform);
                     if (orientedTileCount % width != 0)

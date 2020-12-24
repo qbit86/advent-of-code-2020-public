@@ -19,7 +19,7 @@ namespace AdventOfCode2020
                 "#    ##    ##    ###",
                 " #  #  #  #  #  #   "
             };
-            for (int transform = 0; transform < 8; ++transform)
+            for (TransformKinds transform = TransformKinds.None; transform < (TransformKinds)8; ++transform)
             {
                 string[] transformedImage = TransformHelpers.ApplyTransform(rawImage, transform);
                 if (ContainsPattern(transformedImage, monsterPattern))

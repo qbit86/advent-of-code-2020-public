@@ -25,7 +25,7 @@ namespace AdventOfCode2020
             IReadOnlyList<OrientedTile> reassembledTiles = Problem.Reassemble(tileById);
             string[] rawImage = GlueHelpers.Glue(reassembledTiles);
 
-            for (int transform = 0; transform < 8; ++transform)
+            for (TransformKinds transform = TransformKinds.None; transform < (TransformKinds)8; ++transform)
             {
                 string[] actual = TransformHelpers.ApplyTransform(rawImage, transform);
                 if (expected.SequenceEqual(actual))
