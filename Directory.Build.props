@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Nullable>enable</Nullable>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+    <RootNamespace>AdventOfCode2020</RootNamespace>
+  </PropertyGroup>
+</Project>

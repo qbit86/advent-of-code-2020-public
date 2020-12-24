@@ -1,0 +1,12 @@
+.antlr/
+.idea/**/*.iml
+.idea/**/contentModel.xml
+.idea/**/modules.xml
+.idea/**/projectSettingsUpdater.xml
+.idea/**/workspace.xml
+.vs/
+.vscode/
+*.suo
+*.user
+bin/
+obj/
