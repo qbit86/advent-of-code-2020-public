@@ -19,6 +19,7 @@ namespace AdventOfCode2020
 
         [Theory]
         [InlineData("sample-input.txt", 273L)]
+        [InlineData("input.txt", 2453L)]
         internal async Task SolvePartTwo(string path, long expected)
         {
             long actual = await ProblemPartTwo.Instance.Solve(path).ConfigureAwait(false);
