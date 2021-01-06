@@ -29,9 +29,7 @@ namespace AdventOfCode2020
                 throw new ArgumentNullException(nameof(tileById));
 
             Node root = Node.Create(Array.Empty<OrientedTile>(), tileById.Values.ToHashSet());
-            EnumerableDfs<
-                Graph, Node, Endpoints<Node>, IEnumerator<Endpoints<Node>>, HashSet<Node>, ExploredSetPolicy> dfs =
-                new(default);
+            EnumerableDfs<Graph, Node, Endpoints<Node>, IEnumerator<Endpoints<Node>>> dfs = default;
             IEnumerator<Node> nodes = dfs.EnumerateVertices(Graph.Instance, root, new HashSet<Node>());
             while (nodes.MoveNext())
             {
