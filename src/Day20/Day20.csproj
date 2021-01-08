@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Arborescence.Primitives" Version="0.7.1" />
-    <PackageReference Include="Arborescence.Traversal" Version="0.8.0" />
+    <PackageReference Include="Arborescence.Traversal" Version="0.8.1" />
   </ItemGroup>
 
 </Project>
